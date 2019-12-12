@@ -1,6 +1,6 @@
 package com.jianliang.guo.plus.utils;
 
-import org.apache.log4j.spi.ErrorCode;
+import com.alibaba.druid.wall.violation.ErrorCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

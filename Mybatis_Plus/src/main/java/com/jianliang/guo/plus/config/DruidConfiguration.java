@@ -2,7 +2,8 @@ package com.jianliang.guo.plus.config;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -20,7 +21,7 @@ import java.util.Map;
 @Configuration
 public class DruidConfiguration {
 
-    private static final Logger logger = Logger.getLogger(DruidConfiguration.class);
+    private static final Logger logger = LoggerFactory.getLogger(DruidConfiguration.class);
 
     @Value("${druid.userName}")
     private String userName;
