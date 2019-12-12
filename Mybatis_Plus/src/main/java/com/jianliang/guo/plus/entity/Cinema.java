@@ -4,9 +4,6 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.jianliang.guo.plus.Enum.PropertyType;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -20,9 +17,6 @@ import java.util.Date;
  * @since 2019-12-09
  */
 @Data
-@Getter
-@Setter
-@ToString
 public class Cinema implements Serializable {
 
     private static final long serialVersionUID = 1L;

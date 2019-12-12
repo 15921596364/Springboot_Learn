@@ -1,4 +1,4 @@
-package com.jianliang.guo.plus.serviceImpl;
+package com.jianliang.guo.plus.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;

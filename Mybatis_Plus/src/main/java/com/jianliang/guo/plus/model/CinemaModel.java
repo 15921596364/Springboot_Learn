@@ -1,10 +1,7 @@
 package com.jianliang.guo.plus.model;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
+import lombok.Data;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -14,15 +11,11 @@ import java.util.Date;
  *
  * @Description
  */
-@Setter
-@Getter
-@ToString
+@Data
 public class CinemaModel {
 
     @NotNull
-    @Getter
-    @Setter
-    @ToString
+    @Data
     public static class CreateCinema{
         @NotBlank
         @ApiModelProperty(value="影院内码",name="innerCode",example="118")
@@ -61,9 +54,7 @@ public class CinemaModel {
         private Date updateTime;
     }
 
-    @Getter
-    @Setter
-    @ToString
+    @Data
     public static class QueryCinema{
 
         @ApiModelProperty(value="影院内码",name="innerCode",example="111")
@@ -89,9 +80,7 @@ public class CinemaModel {
     }
 
     @NotNull
-    @Getter
-    @Setter
-    @ToString
+    @Data
     public static class UpdateCinema{
         /**
          * 主键自增
