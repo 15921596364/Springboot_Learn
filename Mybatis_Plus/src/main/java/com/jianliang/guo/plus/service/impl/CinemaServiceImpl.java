@@ -13,6 +13,7 @@ import com.jianliang.guo.plus.service.CinemaService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
@@ -48,16 +49,19 @@ public class CinemaServiceImpl extends ServiceImpl<CinemaMapper, Cinema> impleme
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public boolean delById(Integer cinemaId) {
-        return this.update(Wrappers.<Cinema>lambdaUpdate().eq(Objects.nonNull(cinemaId),Cinema::getId,cinemaId).set(Cinema::getDeleted,Boolean.TRUE));
+        return this.update(Wrappers.<Cinema>lambdaUpdate().eq(Objects.nonNull(cinemaId), Cinema::getId, cinemaId).set(Cinema::getDeleted, Boolean.TRUE));
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public boolean createCinema(Cinema cinema) {
         return this.save(cinema);
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public boolean updateCinema(Cinema cinema) {
         return this.update(cinema,Wrappers.<Cinema>lambdaUpdate().eq(Objects.nonNull(cinema.getId()),Cinema::getId,cinema.getId()));
     }
